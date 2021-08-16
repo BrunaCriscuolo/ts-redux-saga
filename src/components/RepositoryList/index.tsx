@@ -13,7 +13,9 @@ type RootState = {
 export const RepositoryList = (): React.ReactElement => {
   const dispatch = useDispatch();
 
-  const { listRepo } = useSelector(({ repositories }: RootState) => repositories);
+  const { listRepo } = useSelector(
+    ({ repositories }: RootState) => repositories
+  );
 
   useEffect(() => {
     dispatch(loadRequest());

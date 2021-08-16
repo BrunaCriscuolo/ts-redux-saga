@@ -1,6 +1,4 @@
-import {
-  call, put, all, takeLatest,
-} from 'redux-saga/effects';
+import { call, put, all, takeLatest } from 'redux-saga/effects';
 import api from '../../../services/api';
 import { RepositoriesTypes } from './types';
 
@@ -16,6 +14,4 @@ export function* load() {
   }
 }
 
-export default all([
-  takeLatest(RepositoriesTypes.LOAD_REQUEST, load),
-]);
+export default all([takeLatest(RepositoriesTypes.LOAD_REQUEST, load)]);
